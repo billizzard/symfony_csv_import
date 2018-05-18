@@ -117,6 +117,7 @@ class BaseCommandTestCase extends KernelTestCase
         static::$commandTester->execute(array(
             'command'  => self::COMMAND,
             '--mode' => 'test',
+            '--delimiter' => ',',
             '--name' => 'test/' . $fileName
         ));
     }
