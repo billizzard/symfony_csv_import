@@ -36,6 +36,11 @@ delimiter: ','
 name: 'import.csv'
 ```
 
+To run migrations need run command:
+```
+php app/console doctrine:migrations:diff
+```
+
 To run phpUnit tests need run command:
 ```
 php bin/phpunit -c app
