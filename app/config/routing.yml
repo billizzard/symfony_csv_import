@@ -1,0 +1,15 @@
+it_csv_import:
+    resource: "@ItCsvImportBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test:
+    resource: "@TestBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: '@ItCsvImportBundle/Controller/'
+    type: annotation
+
+homepage:
+    path: /blog
+    controller: ItCsvImportBundle:Default:index

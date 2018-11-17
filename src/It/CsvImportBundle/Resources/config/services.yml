@@ -1,0 +1,18 @@
+services:
+  prefix.tblprefix_subscriber:
+    class: Prefix\Subscriber\TablePrefixSubscriber
+    arguments:
+      - %prefix.db.table_prefix%
+    tags:
+      - { name: doctrine.event_subscriber }
+
+  console.import_csv:
+    class: It\CsvImportBundle\Command\CsvImportCommand
+    arguments:
+      - "@doctrine.orm.default_entity_manager"
+      - "@console.parser"
+    tags:
+      - { name: console.command }
+
+  console.parser:
+      class: It\CsvImportBundle\Models\Parser\CsvParser

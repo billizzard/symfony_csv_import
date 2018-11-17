@@ -1,0 +1,9 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+imports:
+ - { resource: @ItCsvImportBundle/Resources/config/services.yml }
+
+parameters:
+  prefix.db.table_prefix: tbl
+    #parameter_name: value
+
